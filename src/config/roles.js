@@ -1,5 +1,5 @@
 const allRoles = {
-  user: ['createTodo', 'markTodoCompleted', 'markTodoUncompleted', 'deleteTodo', 'listTodos'],
+  user: ['createTodo', 'updateTodo', 'deleteTodo', 'listTodos'],
 };
 
 const roles = Object.keys(allRoles);
