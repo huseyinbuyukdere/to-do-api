@@ -2,8 +2,6 @@
 
 This project is build from this boilerplate [https://github.com/hagopj13/node-express-boilerplate](https://github.com/hagopj13/node-express-boilerplate)
 
-A boilerplate/starter project for quickly building RESTful APIs using Node.js, Express, and Mongoose.
-
 ## Table of Contents
 
 - [Features](#features)
