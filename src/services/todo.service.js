@@ -1,6 +1,4 @@
-const { db } = require('../models');
-
-const Todos = db.todos;
+const { todos: Todos } = require('../models');
 
 /**
  * Create a todo
@@ -12,16 +10,34 @@ const createTodo = async (todoBody) => {
 };
 
 /**
+ * @param {integer} id
  * @returns {Promise<QueryResult>}
  */
-const getTodos = async () => {
-  const todos = await Todos.findAll();
+const getTodoById = async (id) => {
+  const todo = await Todos.findOne({
+    where: {
+      id,
+    },
+  });
+  return todo;
+};
+
+/**
+ * @param {integer} userId
+ * @returns {Promise<QueryResult>}
+ */
+const getTodosByUserId = async (userId) => {
+  const todos = await Todos.findAll({
+    where: {
+      userId,
+    },
+  });
   return todos;
 };
 
 /**
  * Update todo by id
- * @param {ObjectId} todoId
+ * @param {integer} todoId
  * @param {Object} updateBody
  * @returns {Promise<Todo>}
  */
@@ -33,7 +49,7 @@ const updateTodoById = async (todoId, updateBody) => {
 
 /**
  * Delete todo by id
- * @param {ObjectId} todoId
+ * @param {integer} todoId
  * @returns {Promise<Todo>}
  */
 const deleteTodoById = async (todoId) => {
@@ -44,7 +60,8 @@ const deleteTodoById = async (todoId) => {
 
 module.exports = {
   createTodo,
-  getTodos,
+  getTodoById,
+  getTodosByUserId,
   updateTodoById,
   deleteTodoById,
 };

@@ -8,10 +8,7 @@ module.exports = (sequelize) => {
     userId: {
       type: Sequelize.INTEGER,
     },
-    createdDate: {
-      type: Sequelize.DATE,
-    },
-    updatedDate: {
+    isChecked: {
       type: Sequelize.BOOLEAN,
     },
   });

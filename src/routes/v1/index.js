@@ -12,7 +12,7 @@ const defaultRoutes = [
     route: authRoute,
   },
   {
-    path: '/to-do',
+    path: '/todo',
     route: todoRoute,
   },
 ];

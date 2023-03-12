@@ -5,16 +5,13 @@ module.exports = (sequelize) => {
     token: {
       type: Sequelize.STRING,
     },
-    user: {
+    userId: {
       type: Sequelize.INTEGER,
     },
     type: {
       type: Sequelize.STRING,
     },
     expires: {
-      type: Sequelize.DATE,
-    },
-    createdDate: {
       type: Sequelize.DATE,
     },
   });

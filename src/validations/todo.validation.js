@@ -2,7 +2,7 @@ const Joi = require('joi');
 
 const createTodo = {
   body: Joi.object().keys({
-    todo: Joi.string().required(),
+    content: Joi.string().required(),
   }),
 };
 
@@ -12,8 +12,8 @@ const updateTodo = {
   }),
   body: Joi.object()
     .keys({
-      isChecked: Joi.string(),
-      todo: Joi.string(),
+      isChecked: Joi.boolean(),
+      content: Joi.string(),
     })
     .min(1),
 };
