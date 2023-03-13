@@ -15,7 +15,6 @@ This project is build from this boilerplate [https://github.com/hagopj13/node-ex
 - [Authorization](#authorization)
 - [Logging](#logging)
 - [Linting](#linting)
-- [Contributing](#contributing)
 
 ## Commands
 
@@ -130,7 +129,7 @@ List of available routes:
 
 `GET /v1/todo` - get todos of user\
 `POST /v1/todo` - create a todo\
-`UPDATE /v1/todo/todo-id` - update todo content or id
+`UPDATE /v1/todo/todo-id` - update todo content or id\
 `DELETE /v1/todo/todo-id` - delete todo id
 
 ## Error Handling
